@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{{ url_for('static', filename='dice_entry.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Enter Players Name</h1>
+    <section>
+      <form method="post">
+        <div id="entry">
+          <label>Player 1</label>
+          <input
+            name="player-1"
+            id="player-1"
+            class="entries"
+            placeholder="WRITE HERE......"
+            required
+          />
+
+          <label>Player 2</label>
+          <input
+            name="player-2"
+            id="player-2"
+            class="entries"
+            placeholder="WRITE HERE......"
+            required
+          />
+        </div>
+        <div>
+          <button id="submit-start" type="submit">START GAME</button>
+        </div>
+      </form>
+    </section>
+    <script src="{{ url_for('static', filename='dice_entry.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{{ url_for('static', filename='register.css') }}"
+    />
+    <script src="{{ url_for('static', filename='register.js') }}"></script>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <section id="register">
+      <p>Registration</p>
+      <form method="post">
+        <div id="entry">
+          <label>Name</label>
+          <input
+            name="name"
+            id="name"
+            class="entries"
+            placeholder="WRITE HERE......"
+            required
+          />
+          <label>Username</label>
+          <input
+            name="username"
+            id="username"
+            class="entries"
+            placeholder="WRITE HERE......"
+            required
+          />
+
+          <label>Password</label>
+          <input
+            name="password"
+            id="password"
+            class="entries"
+            placeholder="WRITE HERE......"
+            required
+          />
+          <label>Confirm Password</label>
+          <input
+            name="Confirm-password"
+            id="Confirm-password"
+            class="entries"
+            placeholder="WRITE HERE......"
+            required
+          />
+        </div>
+        <div>
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

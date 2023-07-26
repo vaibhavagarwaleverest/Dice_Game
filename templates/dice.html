@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dice Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="{{ url_for('static', filename='dice.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Play a Dice Game</h1>
+    <p id="comments">Start A New Game....</p>
+    <section div="game-screen">
+      <div id="player1">
+        <span id="p1">Player 1</span>
+
+        <div class="score">
+          <span>Total Score</span>
+          <span id="total1">0</span>
+        </div>
+
+        <div class="current-score">
+          <span>Current Score</span>
+          <span id="current1">0</span>
+        </div>
+      </div>
+
+      <div id="player2">
+        <span id="p2">Player 2</span>
+        <div class="score">
+          <span>Total Score</span>
+          <span id="total2">0</span>
+        </div>
+
+        <div class="current-score">
+          <span>Current Score</span>
+          <span id="current2">0</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="button">
+      <button id="roll-a-dice" type="button" disabled>ROLL A DICE🎲</button>
+      <button id="new-game" type="button">NEW GAME</button>
+    </div>
+    <script src="{{url_for('static', filename='dice.js') }}"></script>
+    <script src="{{url_for('static', filename='dice_entry.js') }}"></script>
+  </body>
+</html>
